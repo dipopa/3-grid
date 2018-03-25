@@ -1,0 +1,42 @@
+.grid {
+  display: grid;
+  height: 800px;
+  grid-template-rows: 20% 60% 20%;
+  grid-gap: 8px;
+}
+nav {
+  background-color: red;
+  grid-row: 1/2;
+
+}
+.main {
+  display: grid;
+  width: inherit;
+  grid-row: 2/3;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.left {
+  background-color: LightPink;
+  grid-column: 1/2;
+}
+.center {
+  background-color: LightGreen;
+  grid-column: 2/3;
+}
+.right {
+  background-color: SkyBlue;
+  grid-column: 3/4;
+}
+
+footer {
+  background-color: blue;
+  grid-row: 3/4;
+
+}
+@media all and (max-width: 800px) {
+  .left, .center, .right {
+    grid-column: 1/-1;
+  }
+}
